@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NLZ SpVgg Bayreuth - Deaktiviert</title>
+
+  <style>
+    body {
+      margin: 0;
+    }
+
+    @font-face {
+      font-family: 'Capsmall';
+      src: url('https://assets.nlz-spvgg-bayreuth.de/fonts/capsmall/capsmall.ttf') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    .dc-page {
+      min-height: 100vh;
+      width: 100%;
+      background: #0B0E0C;
+      display: flex;
+      flex-direction: column;
+      box-sizing: border-box;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .dc-backdrop {
+      position: absolute;
+      inset: 0;
+      background-image: linear-gradient(rgba(11, 14, 12, 0.72), rgba(11, 14, 12, 0.72)), url('https://assets.nlz-spvgg-bayreuth.de/background01.jpg');
+      background-size: cover;
+      background-position: center;
+    }
+
+    .dc-content {
+      position: relative;
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      box-sizing: border-box;
+    }
+
+    .dc-content-inner {
+      text-align: center;
+      max-width: 640px;
+    }
+
+    .dc-eyebrow {
+      font-family: 'Capsmall', Roboto, Helvetia, Arial, sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--color-primary, #FFE900);
+      font-size: 36px;
+      margin: 0 0 24px;
+    }
+
+    .dc-title {
+      font-family: Roboto, Helvetica, sans-serif;
+      font-weight: 500;
+      color: #ffffff;
+      font-size: 28px;
+      line-height: 1.4;
+      margin: 0 0 40px;
+    }
+
+    .dc-cta {
+      display: inline-block;
+      font-family: 'Capsmall', Roboto, Helvetia, Arial, sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      font-size: 15px;
+      background: var(--color-primary, #FFE900);
+      color: var(--color-secondary, #0B0E0C);
+      padding: 14px 32px;
+      border-radius: 9999px;
+      text-decoration: none;
+    }
+
+    .dc-cta:hover {
+      background: var(--color-third, #E6AC00);
+    }
+
+    .dc-footer {
+      position: relative;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 24px;
+      padding: 20px 24px;
+      border-top: 1px solid rgba(255, 255, 255, 0.12);
+    }
+
+    .dc-footer-copy {
+      font-family: Roboto, Helvetica, sans-serif;
+      font-size: 13px;
+      color: rgba(255, 255, 255, 0.6);
+    }
+
+    .dc-footer-link {
+      font-family: Roboto, Helvetica, sans-serif;
+      font-size: 13px;
+      color: rgba(255, 255, 255, 0.75);
+      text-decoration: none;
+    }
+
+    .dc-footer-link:hover {
+      color: var(--color-primary, #FFE900);
+    }
+
+    .dc-cookie-banner {
+      position: relative;
+      background: rgba(255, 255, 255, 0.05);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 16px 24px;
+      text-align: center;
+    }
+
+    .dc-cookie-text {
+      font-family: Roboto, Helvetica, sans-serif;
+      font-size: 13px;
+      color: rgba(255, 255, 255, 0.8);
+      margin: 0;
+    }
+
+    .dc-cta::after {
+      content: ' →';
+      margin-left: 8px;
+    }
+  </style>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const ctaLink = document.querySelector('.dc-cta');
+      if (ctaLink) {
+        const currentDomain = window.location.hostname;
+        const baseUrl = 'https://spvgg-bayreuth.de';
+
+        if ((currentDomain !== undefined || currentDomain !== null || currentDomain !== '') && currentDomain !== 'spvgg-bayreuth.de') {
+          ctaLink.href = baseUrl + '?ref=' + encodeURIComponent(currentDomain);
+        } else {
+          ctaLink.href = baseUrl;
+        }
+      }
+    });
+  </script>
+</head>
+
+<body>
+  <x-dc>
+    <div class="dc-page">
+      <div class="dc-backdrop"></div>
+      <div class="dc-cookie-banner">
+        <p class="dc-cookie-text">Diese Website nutzt keine Cookies.</p>
+      </div>
+      <div class="dc-content">
+        <div class="dc-content-inner">
+          <p class="dc-eyebrow">NLZ SpVgg Bayreuth</p>
+          <h1 class="dc-title">Diese Webseite ist derzeit deaktiviert.</h1>
+          <a href="https://spvgg-bayreuth.de" class="dc-cta">Zur Hauptseite</a>
+        </div>
+      </div>
+      <footer class="dc-footer">
+        <span class="dc-footer-copy">&copy; 2026 NLZ SpVgg Bayreuth & Paul Schur</span>
+        <a target="_blank" href="https://legal.nlz-spvgg-bayreuth.de/?doc=datenschutz.gh" class="dc-footer-link">
+          Datenschutz
+        </a>
+        <a target="_blank" href="https://legal.nlz-spvgg-bayreuth.de/?doc=impressum" class="dc-footer-link">
+          Impressum
+        </a>
+      </footer>
+    </div>
+  </x-dc>
+</body>
+
+</html>
